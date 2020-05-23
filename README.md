@@ -2,6 +2,8 @@
 
 Resositorio para realizar pruebas en Python de algoritmos de Minería de Datos y Machine Learning.
 
+[Documentación Scikit-learn ⚡️](https://scikit-learn.org/)
+
 [Link a documentación en Drive ⚡️](https://drive.google.com/open?id=1SF5qrml1lvR954akoj2bEdc8R59YGFW2)
 <h1 align="center">
   <img src="img/scikit.jpg" alt="logo_mineria">

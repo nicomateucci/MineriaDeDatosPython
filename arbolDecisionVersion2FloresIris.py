@@ -12,6 +12,8 @@ finally:
     # datos de iris, estan dentro de la libreria sklearn
     from sklearn.datasets import load_iris
     from sklearn.tree import DecisionTreeClassifier
+    from sklearn import tree
+    from sklearn.tree import export_text 
 
 iris = load_iris()
 
@@ -40,13 +42,17 @@ print("Primeras 10 variables objetivo")
 print(iris.target[0:150])
 
 # Crear arbol
-tree = DecisionTreeClassifier(max_depth=5, random_state=100) 
+arbol = DecisionTreeClassifier(max_depth=5, random_state=100) 
      # Cantidad de niveles: 5
-tree.fit(iris.data, iris.target) # entrenamiento del arbol
+arbol.fit(iris.data, iris.target) # entrenamiento del arbol
 
 # Obtener predicciones
 print("PREDICCIONES ----------------------------")
-print( tree.predict(iris.data[100:140]) )
+print( arbol.predict(iris.data[100:140]) )
+# tree.plot_tree(arbol) 
+
+r = export_text(decision_tree, feature_names=iris['feature_names'])
+print(r)
 
 
 # Si queremos saber las probabilidades podemos usar el metodo predict_proba
